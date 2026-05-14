@@ -17,7 +17,7 @@ const Company = () => {
     const fifthLogos = [...logos, ...logos, ...logos, ...logos, ...logos];
 
     return (
-        <div className="py-16 overflow-hidden w-full">
+        <section className="pb-10 md:pb-16 overflow-hidden w-full">
             <HeaderSection
                 position="center"
                 title="Trusted by 4,000+ brands across 32 countries"
@@ -57,7 +57,7 @@ const Company = () => {
                 <div className="absolute inset-y-0 left-0 w-12 md:w-20 lg:w-32 bg-linear-to-r from-[#F5F3EF] via-[#F5F3EF]/80 to-transparent pointer-events-none" />
                 <div className="absolute inset-y-0 right-0 w-12 md:w-20 lg:w-32 bg-linear-to-l from-[#F5F3EF] via-[#F5F3EF]/80 to-transparent pointer-events-none" />
             </div>
-        </div>
+        </section>
     );
 };
 

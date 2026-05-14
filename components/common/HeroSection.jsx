@@ -182,12 +182,12 @@ export default function HeroSection({
 }) {
     return (
         <section
-            className={`relative flex items-stretch gap-10 bg-background overflow-hidden min-h-120px ${
+            className={`relative flex items-stretch gap-10 bg-background overflow-hidden min-h-120 ${
                 bottomBorder ? "border-b border-rule" : ""
             } ${className}`}
         >
             {/* ── LEFT ── */}
-            <div className="flex-[0_0_50%] max-w-[50%] flex flex-col justify-center px-2 md:px-0 py-16 pr-14 box-border max-md:flex-none max-md:max-w-full max-md:px-7 max-md:py-12 md:pl-10">
+            <div className="flex-[0_0_50%] max-w-[50%] flex flex-col justify-center px-2 md:px-0 py-16 pr-14 box-border max-md:flex-none max-md:max-w-full max-md:px-7 max-md:py-12 md:pl-20">
                 <Eyebrow text={eyebrow} />
                 <Heading>{heading}</Heading>
                 <Subheading>{subheading}</Subheading>

@@ -2,12 +2,12 @@ const PRIMARY_COLOR = "#1a1a1a";
 const SECONDARY_COLOR = "#B85C38";
 
 // ── Heading renderer ──────────────────────────────────────────────────────────
-function Heading({ segments }) {
+function Heading({ segments, position }) {
     return (
         <h2
-            className="font-bold leading-tight"
+            className={`font-bold leading-tight ${position === "center" ? "md:w-195" : "md:w-225"}`}
             style={{
-                fontSize: "50px",
+                fontSize: "42px",
                 fontFamily: "'Playfair Display', Georgia, serif",
             }}
         >
@@ -31,7 +31,7 @@ function Title({ text, showDivider }) {
     if (!text) return null;
     return (
         <div
-            className={`flex items-center gap-3 mb-5 ${showDivider ? "justify-center" : ""}`}
+            className={`flex items-center gap-3 ${showDivider ? "justify-center" : ""}`}
             style={{ fontFamily: "'DM Sans', sans-serif" }}
         >
             {showDivider && (
@@ -95,7 +95,7 @@ export default function HeaderSection({
                 <Title text={title} showDivider={isCenter} />
 
                 {/* Heading */}
-                {heading.length > 0 && <Heading segments={heading} />}
+                {heading.length > 0 && <Heading segments={heading} position={position} />}
 
                 {/* Subheading */}
                 {subheading && (

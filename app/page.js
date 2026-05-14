@@ -1,5 +1,7 @@
 import HeroSection from "@/components/common/HeroSection";
 import Company from "@/components/home/Company";
+import DifferenceSection from "@/components/home/DifferenceSection";
+import ServiceSection from "@/components/home/ServiceSection";
 import Image from "next/image";
 
 export default function HomePage() {
@@ -20,9 +22,11 @@ export default function HomePage() {
                 }
             />
 
-            <div className="max-w-310 mx-auto">
+            <>
                 <Company />
-            </div>
+                <ServiceSection />
+                <DifferenceSection />
+            </>
         </>
     );
 }
