@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const PRIMARY_COLOR = "#1a1a1a";
 const SECONDARY_COLOR = "#B85C38";
 
@@ -5,7 +7,7 @@ const SECONDARY_COLOR = "#B85C38";
 function Heading({ segments, position }) {
     return (
         <h2
-            className={`font-bold leading-tight ${position === "center" ? "md:w-195" : "md:w-225"}`}
+            className={`font-bold leading-tight capitalize ${position === "center" ? "md:w-200" : "md:w-225"}`}
             style={{
                 fontSize: "42px",
                 fontFamily: "'Playfair Display', Georgia, serif",
@@ -53,19 +55,19 @@ function Title({ text, showDivider }) {
 // ── Button ────────────────────────────────────────────────────────────────────
 function CTAButton({ label, href, variant }) {
     const base =
-        "inline-flex items-center gap-2 px-7 py-4 rounded-full text-sm font-semibold transition-all duration-200 cursor-pointer select-none";
+        "inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-sm font-semibold transition-all duration-200 cursor-pointer select-none";
     const solid = `text-white bg-primary hover:bg-secondary duration-200 active:scale-95`;
     const outline = `border hover:opacity-70 active:scale-95`;
 
     return (
-        <a
+        <Link
             href={href || "#"}
             className={`${base} ${variant === "solid" ? solid : outline}`}
-            style={variant === "solid" ? {} : { borderColor: "#d0cdc8", color: PRIMARY_COLOR }}
+            style={variant === "solid" ? {justifyContent: "center", alignItems: "center", display: "flex"} : { borderColor: "#d0cdc8", color: PRIMARY_COLOR }}
         >
             {label}
-            {variant === "solid" && <span style={{ fontSize: "1rem" }}>→</span>}
-        </a>
+            {variant === "solid" && <span style={{ fontSize: "1rem", marginTop: "-4px" }}>→</span>}
+        </Link>
     );
 }
 
@@ -111,7 +113,7 @@ export default function HeaderSection({
                 {paragraph && (
                     <p
                         className="leading-relaxed"
-                        style={{ fontSize: "18px", color: "#555", maxWidth: "560px" }}
+                        style={{ fontSize: "18px", color: "#555", maxWidth: "750px" }}
                     >
                         {paragraph}
                     </p>
