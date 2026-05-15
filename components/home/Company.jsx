@@ -43,8 +43,8 @@ const Company = () => {
                     {fifthLogos.map((logo, index) => (
                         <div key={index} className="shrink-0">
                             <Image
-                                width={100}
-                                height={100}
+                                width={80}
+                                height={80}
                                 src={logo.src}
                                 alt="Company Logo"
                                 className="h-8 md:h-10 lg:h-12 w-auto grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
