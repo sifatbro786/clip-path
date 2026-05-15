@@ -1,6 +1,6 @@
 
 
-export default function AboutPage() {
+export default function page() {
     return (
         <div>
             page
