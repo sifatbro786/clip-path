@@ -52,3 +52,38 @@ export const serviceFaq = [
         answer: "You can upload your assets securely through our client portal, or share link paths via Dropbox, Google Drive, or Wetransfer. Once completed, you will receive a direct download link instantly.",
     },
 ];
+
+export const PricingFaq = [
+    {
+        question: "Why is your pricing higher than some other offshore vendors?",
+        answer: "We focus on premium quality, reliable turnaround times, and data security. Our team consists of top-tier professionals ensuring your standards are always met without compromises.",
+    },
+    {
+        question: "Why is your pricing lower than US/UK studios?",
+        answer: "By optimizing our operations and leveraging efficient workflow management tools, we can offer competitive global rates while maintaining the exact same high-end quality.",
+    },
+    {
+        question: "Can I pay in my local currency?",
+        answer: "Yes, we support multi-currency billing through our payment gateways, making it easy for you to pay in USD, EUR, GBP, or your respective local currency.",
+    },
+    {
+        question: "Do you offer discounts for agencies or photography studios?",
+        answer: "Absolutely. We offer tailored high-volume pricing plans and enterprise packages specifically designed for agencies and high-output photography studios.",
+    },
+    {
+        question: "What happens if I go over my monthly package limit?",
+        answer: "If you exceed your limit, any additional items will be billed at a transparent overage rate, or you can seamlessly upgrade your tier at any point mid-month.",
+    },
+    {
+        question: "Can I cancel my monthly package anytime?",
+        answer: "Yes, our monthly subscriptions are completely flexible. You can pause, downgrade, or cancel your renewal dynamic settings at any time without hidden fees.",
+    },
+    {
+        question: "Do you have a minimum order?",
+        answer: "We don't impose strict limits on our standard plans, though specialized custom batches may have small baseline requirements depending on the workflow depth.",
+    },
+    {
+        question: "How do I send and receive images?",
+        answer: "You can securely upload and download your assets directly through our dashboard, or connect via popular cloud solutions like Google Drive, Dropbox, or custom FTP servers.",
+    },
+];

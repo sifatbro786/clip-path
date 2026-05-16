@@ -1,4 +1,3 @@
-// PricingSection.jsx
 import { pricingPlans } from "@/data/pricingPlan";
 import HeaderSection from "../common/HeaderSection";
 import Link from "next/link";
