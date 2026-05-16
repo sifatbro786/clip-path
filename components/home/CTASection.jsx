@@ -3,7 +3,7 @@ import HeaderSection from "../common/HeaderSection";
 
 export default function CTASection() {
     return (
-        <section className="max-w-310 mx-auto px-4 sm:px-6">
+        <section className="max-w-310 mx-auto px-4 sm:px-6 md:py-10">
             <HeaderSection
                 position="center"
                 title="Ready to talk"

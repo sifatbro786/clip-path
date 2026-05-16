@@ -35,7 +35,7 @@ const Footer = () => {
                     <div className="w-full md:w-auto flex flex-col sm:flex-row gap-6 sm:gap-8 md:gap-12 lg:gap-20 justify-start">
                         {/* Column 1: Working Hours */}
                         <div className="flex flex-col gap-1.5 md:gap-2 text-center sm:text-left">
-                            <h3 className="text-white font-semibold text-sm md:text-base mb-0.5 md:mb-1">
+                            <h3 className="text-white font-sans font-semibold text-sm md:text-base mb-0.5 md:mb-1">
                                 Working hours:
                             </h3>
                             <p className="text-xs md:text-sm text-gray-400 font-sans leading-relaxed">
@@ -48,7 +48,7 @@ const Footer = () => {
 
                         {/* Column 2: Address */}
                         <div className="flex flex-col gap-1.5 md:gap-2 text-center sm:text-left">
-                            <h3 className="text-white font-semibold text-sm md:text-base mb-0.5 md:mb-1">
+                            <h3 className="text-white font-sans font-semibold text-sm md:text-base mb-0.5 md:mb-1">
                                 Address:
                             </h3>
                             <p className="text-xs md:text-sm text-gray-400 font-sans leading-relaxed">
@@ -61,7 +61,7 @@ const Footer = () => {
 
                         {/* Column 3: Contact */}
                         <div className="flex flex-col gap-1.5 md:gap-2 text-center sm:text-left">
-                            <h3 className="text-white font-semibold text-sm md:text-base mb-0.5 md:mb-1">
+                            <h3 className="text-white font-sans font-semibold text-sm md:text-base mb-0.5 md:mb-1">
                                 Hit us up:
                             </h3>
                             <Link

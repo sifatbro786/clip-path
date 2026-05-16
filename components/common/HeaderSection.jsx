@@ -5,10 +5,10 @@ const PRIMARY_COLOR = "#1a1a1a";
 const SECONDARY_COLOR = "#B85C38";
 
 // ── Heading renderer ──────────────────────────────────────────────────────────
-function Heading({ segments, position }) {
+function Heading({ segments, position, section }) {
     return (
         <h2
-            className={`font-bold leading-tight capitalize ${position === "center" ? "md:w-200" : "md:w-225"} text-3xl sm:text-4xl md:text-[42px]`}
+            className={`font-bold leading-tight capitalize ${position === "center" ? "md:w-200" : "md:w-230"} ${section ? "max-w-150" : ""} text-3xl sm:text-4xl md:text-[42px]`}
             style={{
                 fontFamily: "'Playfair Display', Georgia, serif",
             }}
@@ -63,7 +63,7 @@ function CTAButton({ label, href, variant }) {
     const base =
         "inline-flex items-center justify-center gap-2 px-5 md:px-6 lg:px-7 py-3 md:py-4 rounded-full text-xs md:text-sm font-semibold transition-all duration-200 cursor-pointer select-none";
     const solid = `text-white bg-primary hover:bg-secondary duration-200 active:scale-95`;
-    const outline = `border hover:opacity-70 active:scale-95`;
+    const outline = `border border-[#d0cdc8] text-primary hover:border-secondary hover:text-secondary active:scale-95`;
 
     return (
         <Link
@@ -72,7 +72,7 @@ function CTAButton({ label, href, variant }) {
             style={
                 variant === "solid"
                     ? { justifyContent: "center", alignItems: "center", display: "flex" }
-                    : { borderColor: "#d0cdc8", color: PRIMARY_COLOR }
+                    : {}
             }
         >
             {label}
@@ -90,6 +90,7 @@ export default function HeaderSection({
     paragraph,
     buttons = [],
     footer,
+    section,
 }) {
     const isCenter = position === "center";
     const alignClass = isCenter ? "items-center text-center" : "items-start text-left";
@@ -107,7 +108,9 @@ export default function HeaderSection({
                 <Title text={title} showDivider={isCenter} />
 
                 {/* Heading */}
-                {heading.length > 0 && <Heading segments={heading} position={position} />}
+                {heading.length > 0 && (
+                    <Heading segments={heading} position={position} section={section} />
+                )}
 
                 {/* Subheading */}
                 {subheading && (

@@ -26,6 +26,7 @@ export default function CompareImage({ src1, src2, alt1, alt2 }) {
                             alt={alt1}
                             src={src1}
                             style={{ objectFit: "cover", objectPosition: "top center" }}
+                            sizes="100vw"
                         />
                         <span
                             style={{
@@ -56,6 +57,7 @@ export default function CompareImage({ src1, src2, alt1, alt2 }) {
                             alt={alt2}
                             src={src2}
                             style={{ objectFit: "cover", objectPosition: "top center" }}
+                            sizes="100vw"
                         />
                         <span
                             style={{

@@ -18,7 +18,7 @@ const Company = () => {
     const fifthLogos = [...logos, ...logos, ...logos, ...logos, ...logos];
 
     return (
-        <section className="pt-4 md:pt-10 lg:pt-16 pb-12 md:pb-20 lg:pb-32 overflow-hidden w-full px-4 sm:px-6">
+        <section className="pt-4 md:pt-10 pb-12 md:pb-20 lg:pb-32 overflow-hidden w-full px-4 sm:px-6">
             <HeaderSection
                 position="center"
                 title="Trusted by 4,000+ brands across 32 countries"
