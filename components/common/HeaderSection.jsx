@@ -63,7 +63,7 @@ function CTAButton({ label, href, variant }) {
     const base =
         "inline-flex items-center justify-center gap-2 px-5 md:px-6 lg:px-7 py-3 md:py-4 rounded-full text-xs md:text-sm font-semibold transition-all duration-200 cursor-pointer select-none";
     const solid = `text-white bg-primary hover:bg-secondary duration-200 active:scale-95`;
-    const outline = `border border-[#d0cdc8] text-primary hover:border-secondary hover:text-secondary active:scale-95`;
+    const outline = `border border-ink-soft text-ink-soft hover:border-secondary hover:text-secondary active:scale-95`;
 
     return (
         <Link

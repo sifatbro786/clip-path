@@ -115,6 +115,7 @@ function AfterButtons({ type, paragraph, stats }) {
     if (type === "stats" && stats?.length) {
         return (
             <div className="mt-4 md:mt-5">
+                <hr className="border-0 border-t border-rule mb-4 md:mb-5" />
                 <div className="flex flex-wrap items-start gap-5 md:gap-9">
                     {stats.map((stat, i) => (
                         <React.Fragment key={i}>
