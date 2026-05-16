@@ -1,11 +1,12 @@
+// PricingSection.jsx
 import { pricingPlans } from "@/data/pricingPlan";
 import HeaderSection from "../common/HeaderSection";
 import Link from "next/link";
 
 export default function PricingSection() {
     return (
-        <section className="bg-[#F2EFE8] pb-20">
-            <div className="max-w-310 mx-auto px-4">
+        <section className="bg-[#F2EFE8] py-12 md:py-16 lg:pb-20">
+            <div className="max-w-310 mx-auto px-4 sm:px-6">
                 <HeaderSection
                     position="center"
                     title="Monthly packages"
@@ -16,49 +17,56 @@ export default function PricingSection() {
                     paragraph="Predictable monthly capacity for brands and photographers with continuous editing needs. Priority queue, dedicated PM, rollover credits — and a better per-image rate than ad-hoc orders."
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch mt-8 md:mt-10">
                     {pricingPlans.map((plan, index) => (
                         <div
                             key={index}
-                            className={`relative p-10 rounded-xl flex flex-col ${
+                            className={`relative p-6 md:p-8 lg:p-10 rounded-xl flex flex-col ${
                                 plan.isDark ? "bg-[#1A1A1A] text-white" : "bg-white text-primary"
                             } shadow-sm`}
                         >
                             {plan.isPopular && (
-                                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-secondary text-white text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-widest">
+                                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-secondary text-white text-[9px] md:text-[10px] font-bold px-3 md:px-4 py-1 md:py-1.5 rounded-full uppercase tracking-widest whitespace-nowrap">
                                     Most Popular
                                 </div>
                             )}
 
-                            <div className="mb-8">
-                                <h3 className="text-3xl font-serif font-medium">{plan.name}</h3>
+                            <div className="mb-6 md:mb-8">
+                                <h3 className="text-2xl md:text-3xl font-serif font-medium">
+                                    {plan.name}
+                                </h3>
                                 <p
-                                    className={`text-sm mt-1 ${plan.isDark ? "text-gray-400" : "text-gray-500"}`}
+                                    className={`text-xs md:text-sm mt-1 ${plan.isDark ? "text-gray-400" : "text-gray-500"}`}
                                 >
                                     {plan.subtitle}
                                 </p>
                             </div>
 
-                            <div className="flex items-baseline mb-8">
-                                <span className="text-5xl font-serif">$</span>
-                                <span className="text-7xl font-serif leading-none">
+                            <div className="flex items-baseline mb-6 md:mb-8 flex-wrap">
+                                <span className="text-3xl md:text-4xl lg:text-5xl font-serif">
+                                    $
+                                </span>
+                                <span className="text-5xl md:text-6xl lg:text-7xl font-serif leading-none">
                                     {plan.price}
                                 </span>
                                 <span
-                                    className={`text-sm ml-2 ${plan.isDark ? "text-gray-400" : "text-gray-500"}`}
+                                    className={`text-xs md:text-sm ml-2 ${plan.isDark ? "text-gray-400" : "text-gray-500"}`}
                                 >
                                     / month
                                 </span>
                             </div>
 
                             <div
-                                className={`border-t mb-8 ${plan.isDark ? "border-gray-800" : "border-gray-100"}`}
+                                className={`border-t mb-6 md:mb-8 ${plan.isDark ? "border-gray-800" : "border-gray-100"}`}
                             />
 
-                            <ul className="space-y-5 mb-12 grow">
+                            <ul className="space-y-4 md:space-y-5 mb-8 md:mb-12 grow">
                                 {plan.features.map((feature, i) => (
-                                    <li key={i} className="flex items-start gap-3 text-[13px]">
-                                        <span className="text-secondary font-bold">+</span>
+                                    <li
+                                        key={i}
+                                        className="flex items-start gap-2 md:gap-3 text-[11px] md:text-[13px]"
+                                    >
+                                        <span className="text-secondary font-bold shrink-0">+</span>
                                         <span
                                             className={
                                                 plan.isDark ? "text-gray-300" : "text-gray-700"
@@ -70,13 +78,13 @@ export default function PricingSection() {
                                 ))}
                             </ul>
 
-                            <div className="text-center italic text-xs mb-6 text-gray-400">
+                            <div className="text-center italic text-[10px] md:text-xs mb-5 md:mb-6 text-gray-400">
                                 — Equivalent rate: {plan.equivalent} —
                             </div>
 
                             <Link
                                 href="#"
-                                className={`w-full py-4 rounded-full text-center font-semibold transition-all duration-300 border ${
+                                className={`w-full py-3 md:py-4 rounded-full text-center font-semibold transition-all duration-300 border text-sm md:text-base ${
                                     plan.isDark
                                         ? "bg-secondary border-secondary text-white hover:bg-opacity-90"
                                         : "bg-transparent border-primary text-primary hover:bg-primary hover:text-white"

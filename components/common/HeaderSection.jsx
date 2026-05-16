@@ -1,3 +1,4 @@
+// HeaderSection.jsx
 import Link from "next/link";
 
 const PRIMARY_COLOR = "#1a1a1a";
@@ -7,9 +8,8 @@ const SECONDARY_COLOR = "#B85C38";
 function Heading({ segments, position }) {
     return (
         <h2
-            className={`font-bold leading-tight capitalize ${position === "center" ? "md:w-200" : "md:w-225"}`}
+            className={`font-bold leading-tight capitalize ${position === "center" ? "md:w-200" : "md:w-225"} text-3xl sm:text-4xl md:text-[42px]`}
             style={{
-                fontSize: "42px",
                 fontFamily: "'Playfair Display', Georgia, serif",
             }}
         >
@@ -33,20 +33,26 @@ function Title({ text, showDivider }) {
     if (!text) return null;
     return (
         <div
-            className={`flex items-center gap-3 ${showDivider ? "justify-center" : ""}`}
+            className={`flex items-center gap-2 md:gap-3 ${showDivider ? "justify-center" : ""}`}
             style={{ fontFamily: "'DM Sans', sans-serif" }}
         >
             {showDivider && (
-                <span className="block h-px w-10" style={{ background: SECONDARY_COLOR }} />
+                <span
+                    className="block h-px w-6 md:w-8 lg:w-10"
+                    style={{ background: SECONDARY_COLOR }}
+                />
             )}
             <span
-                className="tracking-[0.18em] text-xs font-semibold uppercase"
+                className="tracking-[0.12em] md:tracking-[0.18em] text-[10px] md:text-xs font-semibold uppercase"
                 style={{ color: SECONDARY_COLOR }}
             >
                 {text}
             </span>
             {showDivider && (
-                <span className="block h-px w-10" style={{ background: SECONDARY_COLOR }} />
+                <span
+                    className="block h-px w-6 md:w-8 lg:w-10"
+                    style={{ background: SECONDARY_COLOR }}
+                />
             )}
         </div>
     );
@@ -55,7 +61,7 @@ function Title({ text, showDivider }) {
 // ── Button ────────────────────────────────────────────────────────────────────
 function CTAButton({ label, href, variant }) {
     const base =
-        "inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-sm font-semibold transition-all duration-200 cursor-pointer select-none";
+        "inline-flex items-center justify-center gap-2 px-5 md:px-6 lg:px-7 py-3 md:py-4 rounded-full text-xs md:text-sm font-semibold transition-all duration-200 cursor-pointer select-none";
     const solid = `text-white bg-primary hover:bg-secondary duration-200 active:scale-95`;
     const outline = `border hover:opacity-70 active:scale-95`;
 
@@ -63,7 +69,11 @@ function CTAButton({ label, href, variant }) {
         <Link
             href={href || "#"}
             className={`${base} ${variant === "solid" ? solid : outline}`}
-            style={variant === "solid" ? {justifyContent: "center", alignItems: "center", display: "flex"} : { borderColor: "#d0cdc8", color: PRIMARY_COLOR }}
+            style={
+                variant === "solid"
+                    ? { justifyContent: "center", alignItems: "center", display: "flex" }
+                    : { borderColor: "#d0cdc8", color: PRIMARY_COLOR }
+            }
         >
             {label}
             {variant === "solid" && <span style={{ fontSize: "1rem", marginTop: "-4px" }}>→</span>}
@@ -87,12 +97,12 @@ export default function HeaderSection({
 
     return (
         <section
-            className="w-full py-24 px-6"
+            className="w-full py-12 md:py-16 lg:py-24 px-4 sm:px-6"
             style={{
                 fontFamily: "'DM Sans', sans-serif",
             }}
         >
-            <div className={`flex flex-col gap-6 ${alignClass} ${maxWClass}`}>
+            <div className={`flex flex-col gap-4 md:gap-5 lg:gap-6 ${alignClass} ${maxWClass}`}>
                 {/* Title */}
                 <Title text={title} showDivider={isCenter} />
 
@@ -102,8 +112,8 @@ export default function HeaderSection({
                 {/* Subheading */}
                 {subheading && (
                     <p
-                        className="font-semibold text-secondary"
-                        style={{ fontSize: "20px", lineHeight: 1.5 }}
+                        className="font-semibold text-secondary text-lg md:text-[20px]"
+                        style={{ lineHeight: 1.5 }}
                     >
                         {subheading}
                     </p>
@@ -112,8 +122,8 @@ export default function HeaderSection({
                 {/* Paragraph */}
                 {paragraph && (
                     <p
-                        className="leading-relaxed"
-                        style={{ fontSize: "18px", color: "#555", maxWidth: "750px" }}
+                        className="leading-relaxed text-base md:text-[18px]"
+                        style={{ color: "#555", maxWidth: "750px" }}
                     >
                         {paragraph}
                     </p>
@@ -132,7 +142,10 @@ export default function HeaderSection({
 
                 {/* Footer */}
                 {footer && (
-                    <p className="text-xs mt-1" style={{ color: "#aaa", letterSpacing: "0.02em" }}>
+                    <p
+                        className="text-[10px] md:text-xs mt-1 break-all text-center md:text-left"
+                        style={{ color: "#aaa", letterSpacing: "0.02em" }}
+                    >
                         {footer}
                     </p>
                 )}

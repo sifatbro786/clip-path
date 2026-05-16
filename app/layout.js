@@ -1,6 +1,6 @@
 import "./globals.css";
 import { Inter, Fraunces } from "next/font/google";
-// import SmoothScroll from "@/components/SmoothScroll";
+import SmoothScroll from "@/components/SmoothScroll";
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
 
@@ -26,11 +26,11 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en" className={`${inter.variable} ${fraunces.variable} h-full antialiased`}>
             <body className="min-h-full">
-                {/* <SmoothScroll> */}
+                <SmoothScroll>
                     <Navbar />
                     <main>{children}</main>
                     <Footer />
-                {/* </SmoothScroll> */}
+                </SmoothScroll>
             </body>
         </html>
     );
