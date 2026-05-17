@@ -114,3 +114,30 @@ export const bookingFaq = [
         answer: "The call takes place via Google Meet or Zoom. Once you book a slot, you'll receive an automated email invitation with the video link. Just click and join at the scheduled time.",
     },
 ];
+
+export const serviceDetailsFaq = [
+    {
+        question: "Do you work with diamonds and luxury stones specifically?",
+        answer: "Yes. We specialize in enhancing fire, brilliance, and scintillation in diamonds and precious gemstones. We understand how to preserve natural facets while boosting visual clarity for high-end retail environments.",
+    },
+    {
+        question: "Can you match a specific brand colour or aesthetic?",
+        answer: "Absolutely. We can color-correct and grade all imagery against your specific brand guidelines, Pantone references, or existing product samples to ensure perfect cross-channel consistency.",
+    },
+    {
+        question: "Will you sign an NDA for embargoed campaign work?",
+        answer: "Yes, we regularly sign NDAs for luxury houses and maisons. Your campaign assets remain completely secure and strictly confidential until your official launch date.",
+    },
+    {
+        question: "How does the revision process work for a campaign?",
+        answer: "We offer multi-round, art-director-led revisions. You can provide feedback at pixel-level zoom, and our senior retouchers will refine the pieces until they perfectly align with your vision.",
+    },
+    {
+        question: "Do you offer a free trial on a sample image?",
+        answer: "Yes, we provide a complimentary trial edit for qualified brands so you can personally evaluate our quality, attention to detail, and turnaround time before making any commitment.",
+    },
+    {
+        question: "Can you handle photography I shot myself if it isn't perfect?",
+        answer: "We certainly can. Through advanced reflection construction, surface clean-up, and geometry correction, we can elevate amateur or challenging studio shots into premium, retail-grade listings.",
+    },
+];
