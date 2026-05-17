@@ -26,7 +26,7 @@ export default function Hero() {
                 </div>
 
                 {/* Main Heading */}
-                <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium tracking-tight max-w-lg leading-[1.15] mb-6">
+                <h1 className="font-serif text-4xl sm:text-5xl md:text-[58px] font-medium tracking-tight max-w-lg leading-[1.15] mb-6">
                     <span className="opacity-90 block sm:inline">No hidden fees. </span>
                     <span className="text-secondary italic font-normal block sm:inline">
                         No surprises.
@@ -54,7 +54,7 @@ export default function Hero() {
             </div>
 
             {/* Bottom Sub-Navigation Bar */}
-            <div className="bg-[#faf9f6] border-t border-gray-200/40 w-full overflow-x-auto scrollbar-none">
+            <div className="bg-[#faf9f6] border-y border-gray-300/40 w-full overflow-x-auto scrollbar-none">
                 <div className="max-w-310 mx-auto px-4 sm:px-6 py-4 md:py-5">
                     <nav className="flex justify-start md:justify-center items-center gap-6 md:gap-8 lg:gap-10 min-w-max md:min-w-0 mx-auto text-[10px] md:text-xs font-sans font-medium tracking-widest text-gray-500">
                         {navItems.map((item, idx) => (

@@ -555,7 +555,7 @@ export default function ServiceDetailsPage() {
                             <span className="text-secondary text-[10px] md:text-xs font-semibold tracking-widest uppercase block mb-4">
                                 Pricing
                             </span>
-                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight tracking-tight mb-6">
+                            <h2 className="text-4xl md:text-5xl font-serif leading-tight tracking-tight mb-6">
                                 Quoted by{" "}
                                 <span className="text-secondary italic font-normal">project.</span>
                             </h2>

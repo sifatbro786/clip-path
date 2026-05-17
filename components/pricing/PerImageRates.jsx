@@ -52,11 +52,11 @@ export default function PerImageRates() {
         <section className="bg-white text-[#1A1A1A]">
             <div className="max-w-310 mx-auto pt-16 md:pt-32 pb-16 md:pb-24 lg:pb-32 px-4 sm:px-6">
                 {/* Header Section */}
-                <div className="max-w-3xl mb-16 md:mb-24">
+                <div className="max-w-3xl mb-16">
                     <span className="block text-[10px] md:text-xs uppercase tracking-widest text-secondary font-sans font-semibold mb-4">
                         PER-IMAGE RATES
                     </span>
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal font-serif tracking-tight mb-6">
+                    <h2 className="text-4xl md:text-5xl font-normal font-serif tracking-tight mb-6">
                         Pay only for <span className="text-secondary italic">what you order.</span>
                     </h2>
                     <p className="font-serif text-sm md:text-base text-[#555555] leading-relaxed font-light max-w-xl">
@@ -70,7 +70,7 @@ export default function PerImageRates() {
                     <table className="w-full min-w-225 border-collapse font-serif text-left">
                         {/* Top Thick Border Header */}
                         <thead>
-                            <tr className="border-t-2 border-b border-[#1A1A1A]">
+                            <tr className="border-t-2 border-b border-gray-300">
                                 <th className="py-4 w-[35%] text-[10px] md:text-xs uppercase tracking-widest text-[#99928C] font-sans font-medium">
                                     SERVICE
                                 </th>
@@ -124,7 +124,7 @@ export default function PerImageRates() {
                     </table>
 
                     {/* Bottom Thick Border Divider */}
-                    <div className="border-b-2 border-[#1A1A1A] w-full"></div>
+                    <div className="border-b-2 border-gray-300 w-full"></div>
                 </div>
 
                 {/* Bottom Tiers Footnote Cards Container */}

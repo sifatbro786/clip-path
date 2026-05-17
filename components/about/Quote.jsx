@@ -4,7 +4,7 @@ export default function Quote() {
             <div className="max-w-310 mx-auto pt-8 md:pt-28 pb-12 md:pb-28 px-4 sm:px-6 bg-[#F2EFE8]">
                 <div className="max-w-4xl mx-auto text-center space-y-8 md:space-y-10">
                     {/* Main Editorial Quote */}
-                    <blockquote className="text-2xl sm:text-3xl md:text-4xl font-serif text-primary leading-[1.35] sm:leading-[1.4] md:leading-[1.45] font-light tracking-tight">
+                    <blockquote className="text-2xl sm:text-3xl md:text-5xl font-serif text-primary leading-[1.35] sm:leading-[1.4] md:leading-[1.45] font-light tracking-tight">
                         We grow this business{" "}
                         <span className="italic text-secondary font-serif">
                             one image and one relationship at a time.

@@ -12,7 +12,7 @@ function TextSide({ item, index, alignRight }) {
                 {String(index + 1).padStart(2, "0")}
             </p>
 
-            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-primary leading-snug">
+            <h3 className="font-serif text-2xl sm:text-[28px] font-medium text-primary leading-snug">
                 {item.title}
             </h3>
 

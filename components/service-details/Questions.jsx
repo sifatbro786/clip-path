@@ -20,7 +20,7 @@ export default function FAQSection() {
                     <span className="text-secondary text-[10px] md:text-xs font-semibold tracking-widest uppercase block mb-4">
                         Common Questions
                     </span>
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight tracking-tight">
+                    <h2 className="text-4xl md:text-5xl font-serif leading-tight tracking-tight">
                         Things{" "}
                         <span className="text-secondary italic font-normal">jewelry brands</span>{" "}
                         ask.

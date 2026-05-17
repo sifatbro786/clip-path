@@ -8,7 +8,7 @@ const SECONDARY_COLOR = "#B85C38";
 function Heading({ segments, position, section }) {
     return (
         <h2
-            className={`font-bold leading-tight capitalize ${position === "center" ? "md:w-200" : "md:w-230"} ${section ? "max-w-150" : ""} text-3xl sm:text-4xl md:text-[42px]`}
+            className={`leading-tight capitalize ${position === "center" ? "md:w-200" : "md:w-230"} ${section ? "max-w-150" : ""} text-3xl sm:text-4xl md:text-5xl`}
             style={{
                 fontFamily: "'Playfair Display', Georgia, serif",
             }}

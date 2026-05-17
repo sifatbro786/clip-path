@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function PricingSection() {
     return (
-        <section className="bg-[#F2EFE8] py-12 md:py-16 lg:pb-20">
+        <section className="bg-[#F2EFE8] lg:pb-20">
             <div className="max-w-310 mx-auto px-4 sm:px-6">
                 <HeaderSection
                     position="center"

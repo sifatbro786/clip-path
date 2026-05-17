@@ -1,5 +1,3 @@
-import React from "react";
-
 const VolumeDiscounts = () => {
     // Design er pricing tier data matrix
     const discountTiers = [

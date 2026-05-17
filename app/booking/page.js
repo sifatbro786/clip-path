@@ -40,7 +40,7 @@ export default function BookingPage() {
                     <span className="text-secondary text-xs font-semibold tracking-widest uppercase block mb-4">
                         What We&apos;ll Cover
                     </span>
-                    <h2 className="text-4xl md:text-6xl text-[#1a1a1a] font-serif leading-tight tracking-tight">
+                    <h2 className="text-4xl md:text-5xl text-[#1a1a1a] font-serif leading-tight tracking-tight">
                         Thirty minutes, <br className="sm:hidden" />
                         three <span className="text-secondary italic">simple goals.</span>
                     </h2>
@@ -190,7 +190,7 @@ export default function BookingPage() {
                     <span className="text-secondary text-[10px] md:text-xs font-semibold tracking-widest uppercase block mb-3">
                         Before you book
                     </span>
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl text-[#1a1a1a] font-serif leading-tight tracking-tight mb-4">
+                    <h2 className="text-4xl md:text-5xl lg:text-5xl text-[#1a1a1a] font-serif leading-tight tracking-tight mb-4">
                         Do you actually <span className="text-secondary italic">need a call?</span>
                     </h2>
                     <p className="text-gray-550 text-base md:text-lg font-serif leading-relaxed font-light">
@@ -336,7 +336,7 @@ export default function BookingPage() {
                             <span className="text-secondary text-[10px] md:text-xs font-semibold tracking-widest uppercase block mb-3">
                                 Recent Work
                             </span>
-                            <h2 className="text-4xl md:text-5xl lg:text-6xl text-[#1a1a1a] font-serif leading-tight tracking-tight">
+                            <h2 className="text-4xl md:text-5xl lg:text-5xl text-[#1a1a1a] font-serif leading-tight tracking-tight">
                                 A look at{" "}
                                 <span className="text-secondary italic">what we ship.</span>
                             </h2>

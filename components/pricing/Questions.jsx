@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { PricingFaq } from "@/data/faqData";
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
 
 export default function Questions() {
     const [openIndex, setOpenIndex] = useState(null);

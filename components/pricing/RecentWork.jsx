@@ -1,3 +1,4 @@
+import Link from "next/link";
 import HeaderSection from "../common/HeaderSection";
 
 export default function RecentWork() {
@@ -38,10 +39,8 @@ export default function RecentWork() {
     return (
         <section className="bg-[#FAF8F4]">
             <div className="max-w-310 mx-auto pt-8 pb-16 md:pb-24 lg:pb-32 px-4 sm:px-6">
-                {/* Header Wrapper to position 'See full portfolio' */}
                 <div className="relative flex flex-col md:flex-row md:items-end md:justify-between mb-12">
                     <div className="flex-1">
-                        {/* Your existing header component - untouched */}
                         <HeaderSection
                             position="left"
                             title="See the work"
@@ -58,12 +57,12 @@ export default function RecentWork() {
                     </div>
 
                     {/* See Full Portfolio Link */}
-                    <a
-                        href="#"
+                    <Link
+                        href="/portfolio"
                         className="mt-4 md:mt-0 font-sans text-xs font-medium text-[#1A1A1A] hover:text-secondary transition-colors flex items-center gap-1 whitespace-nowrap md:mb-1"
                     >
                         See full portfolio <span className="text-sm font-light">—</span>
-                    </a>
+                    </Link>
                 </div>
 
                 {/* Gallery Grid: 1 col on mobile, 2 cols on tablet, 3 cols on desktop */}

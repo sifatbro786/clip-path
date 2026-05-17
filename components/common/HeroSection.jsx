@@ -1,34 +1,4 @@
-// HeroSection.jsx
-/**
- * HeroSection — Reusable split-layout hero component (Tailwind CSS)
- *
- * Props:
- * ─────────────────────────────────────────────────────────────
- * eyebrow        {string}             Small label above heading (with left-line divider)
- * heading        {string|ReactNode}   Main h1 – supports JSX for <em> italic/colored spans
- * subheading     {string|ReactNode}   Optional h2 below heading
- * paragraph      {string}             Body copy
- *
- * primaryBtn     { label, href, onClick }
- * secondaryBtn   { label, href, onClick }
- *
- * afterButtons   {"paragraph"|"stats"|"divider"|null}
- *   "paragraph"  → afterParagraph prop rendered below buttons   (case 2)
- *   "stats"      → afterStats[] rendered below buttons           (case 3)
- *   "divider"    → thin hr rendered below buttons
- *
- * afterParagraph {string}             Used when afterButtons="paragraph"
- * afterStats     [{value, label}]     Used when afterButtons="stats", max 3
- *
- * imageSlot      {ReactNode}          Right-side content; defaults to dark placeholder
- *
- * bottomBorder   {boolean=true}       Thin rule at the very bottom of the section
- *
- * className      {string}             Extra class on the section wrapper
- * ─────────────────────────────────────────────────────────────
- */
-
-import React from "react";
+import { Fragment } from "react";
 
 function Eyebrow({ text }) {
     if (!text) return null;
@@ -43,7 +13,7 @@ function Eyebrow({ text }) {
 function Heading({ children }) {
     if (!children) return null;
     return (
-        <h1 className="text-[clamp(28px,5vw,58px)] font-bold leading-[1.2] md:leading-[1.08] tracking-[-0.01em] text-foreground mb-2 [&_em]:italic [&_em]:text-secondary max-w-full md:max-w-150">
+        <h1 className="text-[clamp(28px,5vw,58px)] leading-[1.2] md:leading-[1.08] tracking-[-0.01em] text-foreground mb-2 [&_em]:italic [&_em]:text-secondary max-w-full md:max-w-150">
             {children}
         </h1>
     );
@@ -118,7 +88,7 @@ function AfterButtons({ type, paragraph, stats }) {
                 <hr className="border-0 border-t border-rule mb-4 md:mb-5" />
                 <div className="flex flex-wrap items-start gap-5 md:gap-9">
                     {stats.map((stat, i) => (
-                        <React.Fragment key={i}>
+                        <Fragment key={i}>
                             {i > 0 && (
                                 <div className="hidden sm:block w-px h-9 bg-rule self-center shrink-0" />
                             )}
@@ -134,7 +104,7 @@ function AfterButtons({ type, paragraph, stats }) {
                                     {stat.label}
                                 </p>
                             </div>
-                        </React.Fragment>
+                        </Fragment>
                     ))}
                 </div>
             </div>

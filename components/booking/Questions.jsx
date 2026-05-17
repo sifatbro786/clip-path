@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { bookingFaq } from "@/data/faqData";
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
 
 export default function Questions() {
     const [activeIndex, setActiveIndex] = useState(null);
@@ -19,7 +19,7 @@ export default function Questions() {
                     <span className="text-secondary text-[10px] md:text-xs font-semibold tracking-widest uppercase block mb-3">
                         Common Questions
                     </span>
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl text-[#1a1a1a] font-serif leading-tight tracking-tight">
+                    <h2 className="text-4xl md:text-5xl text-[#1a1a1a] font-serif leading-tight tracking-tight">
                         A few things <span className="text-secondary italic">people ask.</span>
                     </h2>
                 </div>
