@@ -1,4 +1,3 @@
-// PricingSection.jsx
 import { pricingPlans } from "@/data/pricingPlan";
 import HeaderSection from "../common/HeaderSection";
 import Link from "next/link";
@@ -96,8 +95,8 @@ export default function PricingSection() {
                     ))}
                 </div>
 
-                <div className="mt-16 flex flex-col font-sans items-center text-[18px]">
-                    <p className="w-150 text-center italic">
+                <div className="mt-8 sm:mt-16 flex flex-col font-sans items-center text-[18px]">
+                    <p className="w-auto md:w-150 text-center italic">
                         Need more than 600 images per month? We build custom enterprise packages for
                         catalog companies, agencies, and photography studios.{" "}
                     </p>

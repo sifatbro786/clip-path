@@ -1,4 +1,3 @@
-// CTASection.jsx
 import HeaderSection from "../common/HeaderSection";
 
 export default function CTASection() {

@@ -31,7 +31,7 @@ export default function ServicesPage() {
                     { value: "4M+", label: "Paths drawn since 2014" },
                 ]}
                 imageSlot={
-                    <Image width={1000} height={1000} src="/hero1.jpg" alt="Before / After" />
+                    <Image width={1000} height={1000} loading="eager" src="/hero1.jpg" alt="Before / After" />
                 }
             />
 

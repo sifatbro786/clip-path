@@ -87,3 +87,30 @@ export const PricingFaq = [
         answer: "You can securely upload and download your assets directly through our dashboard, or connect via popular cloud solutions like Google Drive, Dropbox, or custom FTP servers.",
     },
 ];
+
+export const bookingFaq = [
+    {
+        question: "Is the consultation actually free?",
+        answer: "Yes, entirely free. We use this time to understand your project requirements, goals, and to see if we are a good fit for each other. There is absolutely no obligation to commit.",
+    },
+    {
+        question: "What time zones do you cover?",
+        answer: "We work with clients globally and accommodate most major time zones including EST, PST, GMT, and AEST. We will find a slot that works perfectly for your schedule.",
+    },
+    {
+        question: "Can I bring my photographer or designer to the call?",
+        answer: "Absolutely! Having your creative team on the call helps us align on technical guidelines, quality expectations, and workflow much faster.",
+    },
+    {
+        question: "Will you sign an NDA?",
+        answer: "Yes, we regularly sign Non-Disclosure Agreements with brands and agencies to ensure absolute privacy and security for all your unreleased product images and assets.",
+    },
+    {
+        question: "What if I don't end up using your services?",
+        answer: "That is completely fine. You'll still walk away with a clear understanding of your asset scope and a written quote. No hard feelings or persistent sales follow-ups.",
+    },
+    {
+        question: "How does the call actually happen?",
+        answer: "The call takes place via Google Meet or Zoom. Once you book a slot, you'll receive an automated email invitation with the video link. Just click and join at the scheduled time.",
+    },
+];
