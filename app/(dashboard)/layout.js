@@ -13,6 +13,7 @@ import {
     X,
     FileText,
     MessageSquare,
+    Home,
 } from "lucide-react";
 
 export default function DashboardLayout({ children }) {
@@ -42,6 +43,7 @@ export default function DashboardLayout({ children }) {
 
     const navItems = [
         { path: "/dashboard", icon: LayoutDashboard, label: "Dashboard" },
+        { path: "/dashboard/home", icon: Home, label: "Home" },
         { path: "/dashboard/page-meta", icon: FileText, label: "Page Meta" },
         { path: "/dashboard/contacts", icon: MessageSquare, label: "Contacts" },
         ...(user?.role === "super_admin"

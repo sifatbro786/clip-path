@@ -85,7 +85,13 @@ export const contactApi = {
 export const homeApi = {
     // Hero
     getHero: () => apiClient.get("/home/hero"),
-    updateHero: (data) => apiClient.put("/home/admin/hero", data),
+    updateHero: (data) => {
+        return apiClient.put("/home/admin/hero", data, {
+            headers: {
+                "Content-Type": "multipart/form-data",
+            },
+        });
+    },
 
     // Stats
     getStats: () => apiClient.get("/home/admin/stats"),
