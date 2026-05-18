@@ -67,7 +67,7 @@ export default function ServiceSection() {
                                     className="relative w-20 h-20 sm:w-24 sm:h-24 bg-secondary text-primary rounded-full flex items-center justify-center text-center text-[10px] sm:text-xs font-semibold leading-tight hover:bg-primary hover:text-secondary hover:scale-105 transition-transform duration-300"
                                 >
                                     <div className="absolute top-[40%] left-[40%] whitespace-nowrap">
-                                        View All Services
+                                        More Details
                                     </div>
                                 </Link>
                             ) : (
