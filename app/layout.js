@@ -1,5 +1,7 @@
+import { AuthProvider } from "@/hooks/useAuth";
 import "./globals.css";
 import { Inter, Fraunces } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -22,7 +24,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en" className={`${inter.variable} ${fraunces.variable} h-full antialiased`}>
-            <body className="min-h-full">{children}</body>
+            <body className="min-h-full">
+                <AuthProvider>
+                    {children}
+                    <Toaster position="top-right" />
+                </AuthProvider>
+            </body>
         </html>
     );
 }

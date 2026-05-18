@@ -6,16 +6,13 @@ import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 import {
     LayoutDashboard,
-    FileText,
     Users,
     LogOut,
     Shield,
-    MessageSquare,
     Menu,
     X,
-    Bell,
-    Search,
-    FolderKanban,
+    FileText,
+    MessageSquare,
 } from "lucide-react";
 
 export default function DashboardLayout({ children }) {
@@ -45,9 +42,11 @@ export default function DashboardLayout({ children }) {
 
     const navItems = [
         { path: "/dashboard", icon: LayoutDashboard, label: "Dashboard" },
-        // { path: "/page-meta", icon: FileText, label: "Page Meta" },
-        // { path: "/contacts", icon: MessageSquare, label: "Contacts" },
-        ...(user?.role === "super_admin" ? [{ path: "/users", icon: Users, label: "Users" }] : []),
+        { path: "/dashboard/page-meta", icon: FileText, label: "Page Meta" },
+        { path: "/dashboard/contacts", icon: MessageSquare, label: "Contacts" },
+        ...(user?.role === "super_admin"
+            ? [{ path: "/dashboard/users", icon: Users, label: "Users" }]
+            : []),
     ];
 
     return (
@@ -68,12 +67,12 @@ export default function DashboardLayout({ children }) {
             >
                 {/* Logo */}
                 <div className="p-6 border-b border-gray-200">
-                    <div className="flex items-center gap-2">
+                    <Link href="/" className="flex items-center gap-2">
                         <Shield className="w-8 h-8 text-secondary" />
                         <span className="text-xl font-serif font-bold text-primary">
                             AdminPanel
                         </span>
-                    </div>
+                    </Link>
                     <p className="text-xs text-ink-mute mt-1">Rapid Clipping Path</p>
                 </div>
 
@@ -127,28 +126,6 @@ export default function DashboardLayout({ children }) {
 
             {/* Main Content */}
             <div className="lg:ml-64">
-                {/* Header */}
-                <header className="bg-white border-b border-gray-200 px-4 sm:px-6 py-4 sticky top-0 z-30">
-                    <div className="flex items-center justify-between">
-                        <div className="flex-1 max-w-md">
-                            <div className="relative">
-                                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-ink-mute" />
-                                <input
-                                    type="text"
-                                    placeholder="Search..."
-                                    className="w-full pl-9 pr-4 py-2 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-secondary/50 focus:ring-1 focus:ring-secondary/50 transition-colors"
-                                />
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-4">
-                            <button className="relative p-2 text-ink-mute hover:text-secondary transition-colors">
-                                <Bell className="w-5 h-5" />
-                                <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
-                            </button>
-                        </div>
-                    </div>
-                </header>
-
                 {/* Page Content */}
                 <main className="p-4 sm:p-6">{children}</main>
             </div>

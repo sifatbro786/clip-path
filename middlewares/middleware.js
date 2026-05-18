@@ -15,8 +15,8 @@ export function middleware(request) {
     // Dashboard routes protection
     if (
         pathname.startsWith("/dashboard") ||
-        // pathname.startsWith("/page-meta") ||
-        // pathname.startsWith("/contacts") ||
+        pathname.startsWith("/page-meta") ||
+        pathname.startsWith("/contacts") ||
         pathname.startsWith("/users")
     ) {
         if (!token) {
@@ -32,10 +32,9 @@ export function middleware(request) {
 export const config = {
     matcher: [
         "/login",
-        "/(auth)/login",
         "/dashboard/:path*",
-        // "/page-meta/:path*",
-        // "/contacts/:path*",
+        "/page-meta/:path*",
+        "/contacts/:path*",
         "/users/:path*",
     ],
 };

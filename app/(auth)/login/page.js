@@ -2,11 +2,13 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Mail, Lock, Eye, EyeOff, ArrowRight, Sparkles, Briefcase, Shield } from "lucide-react";
+import { Mail, Lock, Eye, EyeOff, ArrowRight, Shield } from "lucide-react";
 import Link from "next/link";
+import { useAuth } from "@/hooks/useAuth";
 
 export default function LoginPage() {
     const router = useRouter();
+    const { login } = useAuth();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
@@ -18,60 +20,27 @@ export default function LoginPage() {
         setError("");
         setLoading(true);
 
-        // Simulate login - replace with actual auth logic
-        setTimeout(() => {
-            if (email === "admin@example.com" && password === "111111") {
-                // Store auth token
-                localStorage.setItem("admin_token", "dummy_token");
-                localStorage.setItem(
-                    "admin_user",
-                    JSON.stringify({
-                        name: "Admin User",
-                        email,
-                        role: "admin",
-                    }),
-                );
-                router.push("/dashboard");
-            } else if (email === "solaimanislamsifat@gmail.com" && password === "111111") {
-                localStorage.setItem("admin_token", "dummy_token");
-                localStorage.setItem(
-                    "admin_user",
-                    JSON.stringify({
-                        name: "Super Admin",
-                        email,
-                        role: "super_admin",
-                    }),
-                );
-                router.push("/dashboard");
-            } else {
-                setError("Invalid email or password");
-            }
+        try {
+            await login(email, password);
+            router.push("/dashboard");
+        } catch (error) {
+            setError(error.message || "Invalid email or password");
+        } finally {
             setLoading(false);
-        }, 1000);
+        }
     };
 
     return (
-        <div className="relative w-full max-w-md">
-            {/* Decorative elements */}
-            <div className="absolute -top-4 -right-4">
-                <div className="relative">
-                    <Sparkles className="w-6 h-6 text-secondary animate-pulse" />
-                    <div className="absolute inset-0 animate-ping opacity-75">
-                        <Sparkles className="w-6 h-6 text-secondary" />
-                    </div>
-                </div>
-            </div>
-            <div className="absolute -bottom-4 -left-4">
-                <Briefcase className="w-5 h-5 text-ink-mute" />
-            </div>
-
+        <div className="w-full max-w-md">
             <div className="bg-white/5 backdrop-blur-xl rounded-2xl shadow-2xl p-8 border border-white/10">
                 {/* Logo and Title */}
                 <div className="text-center mb-8">
-                    <div className="inline-flex items-center justify-center w-20 h-20 bg-linear-to-br from-primary to-secondary rounded-2xl mb-5 shadow-xl relative group">
+                    <Link
+                        href="/"
+                        className="inline-flex items-center justify-center w-20 h-20 bg-linear-to-br from-primary to-secondary rounded-2xl mb-5 shadow-xl relative group"
+                    >
                         <Shield className="w-10 h-10 text-white group-hover:scale-110 transition-transform duration-300" />
-                        <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-primary to-secondary opacity-50 blur-xl group-hover:opacity-100 transition-opacity" />
-                    </div>
+                    </Link>
                     <h2 className="text-3xl font-serif font-bold text-white mb-2">Admin Portal</h2>
                     <p className="text-ink-mute text-sm">Secure access to management dashboard</p>
                 </div>
@@ -82,13 +51,6 @@ export default function LoginPage() {
                         {error}
                     </div>
                 )}
-
-                {/* Demo credentials hint */}
-                <div className="mb-6 p-3 bg-secondary/10 border border-secondary/30 rounded-xl text-xs text-center">
-                    <p className="text-secondary font-medium mb-1">Demo Credentials</p>
-                    <p className="text-ink-mute">Admin: admin@example.com / admin123</p>
-                    <p className="text-ink-mute">Super Admin: super@example.com / super123</p>
-                </div>
 
                 {/* Login Form */}
                 <form onSubmit={handleSubmit} className="space-y-5">
@@ -140,7 +102,7 @@ export default function LoginPage() {
                     <button
                         type="submit"
                         disabled={loading}
-                        className="w-full py-3 bg-linear-to-r from-primary to-secondary text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-secondary/25 transform hover:scale-[1.02] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 group"
+                        className="w-full py-3 bg-secondary text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-secondary/25 transform hover:scale-[1.02] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 group cursor-pointer"
                     >
                         {loading ? (
                             <div className="flex items-center justify-center gap-2">
@@ -157,7 +119,7 @@ export default function LoginPage() {
                 </form>
 
                 {/* Footer */}
-                <div className="mt-6 pt-4 text-center border-t border-white/10">
+                <div className="mt-4 pt-4 text-center border-t border-white/10">
                     <p className="text-xs text-ink-mute/70">
                         Secure admin access only. Unauthorized access is prohibited.
                     </p>
