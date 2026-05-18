@@ -1,8 +1,5 @@
 import "./globals.css";
 import { Inter, Fraunces } from "next/font/google";
-// import SmoothScroll from "@/components/SmoothScroll";
-import Navbar from "@/components/common/Navbar";
-import Footer from "@/components/common/Footer";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -25,13 +22,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en" className={`${inter.variable} ${fraunces.variable} h-full antialiased`}>
-            <body className="min-h-full">
-                {/* <SmoothScroll> */}
-                    <Navbar />
-                    <main>{children}</main>
-                    <Footer />
-                {/* </SmoothScroll> */}
-            </body>
+            <body className="min-h-full">{children}</body>
         </html>
     );
 }

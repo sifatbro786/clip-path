@@ -96,11 +96,11 @@ export default function PricingSection() {
                 </div>
 
                 <div className="mt-8 sm:mt-16 flex flex-col font-sans items-center text-[18px]">
-                    <p className="w-auto md:w-150 text-center italic">
+                    <p className="w-auto text-sm md:w-150 text-center">
                         Need more than 600 images per month? We build custom enterprise packages for
                         catalog companies, agencies, and photography studios.{" "}
                     </p>
-                    <Link href="/contact" className="text-secondary mt-2 underline">
+                    <Link href="/contact" className="text-secondary text-sm mt-2">
                         Contact us for a custom quote →
                     </Link>
                 </div>
