@@ -253,7 +253,7 @@ export default function PageMetaManagement() {
 
     return (
         <>
-            <div className="max-w-360 mx-auto p-4">
+            <div className="p-4">
                 {/* Header Section */}
                 <div className="mb-8">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
