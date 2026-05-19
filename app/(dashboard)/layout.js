@@ -14,7 +14,8 @@ import {
     FileText,
     MessageSquare,
     Home,
-    Building,
+    DollarSign,
+    Info,
 } from "lucide-react";
 
 export default function DashboardLayout({ children }) {
@@ -45,7 +46,8 @@ export default function DashboardLayout({ children }) {
     const navItems = [
         { path: "/dashboard", icon: LayoutDashboard, label: "Dashboard" },
         { path: "/dashboard/home", icon: Home, label: "Home" },
-        { path: "/dashboard/about", icon: Building, label: "About" },
+        { path: "/dashboard/about", icon: Info, label: "About" },
+        { path: "/dashboard/price", icon: DollarSign, label: "Price" },
         { path: "/dashboard/page-meta", icon: FileText, label: "Page Meta" },
         { path: "/dashboard/contacts", icon: MessageSquare, label: "Contacts" },
         ...(user?.role === "super_admin"
