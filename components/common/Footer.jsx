@@ -18,9 +18,9 @@ const Footer = () => {
                                 <Image
                                     src="/logo.png"
                                     alt="Rapid Clipping Path"
-                                    width={80}
-                                    height={80}
-                                    className="object-cover w-auto h-auto"
+                                    width={100}
+                                    height={100}
+                                    className="object-cover"
                                 />
                             </Link>
                         </div>

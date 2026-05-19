@@ -2,7 +2,6 @@ import HeaderSection from "@/components/common/HeaderSection";
 import HeroSection from "@/components/common/HeroSection";
 import ClippingPath from "@/components/services/ClippingPath";
 import HandDrawn from "@/components/services/HandDrawn";
-import Pricing from "@/components/services/Pricing";
 import Questions from "@/components/services/Questions";
 import RecentWork from "@/components/services/RecentWork";
 import RelatedServices from "@/components/services/RelatedServices";
@@ -39,7 +38,6 @@ export default function ServicesPage() {
             <UseCases />
             <HandDrawn />
             <RecentWork />
-            <Pricing />
             <WhatYouGet />
             <Questions />
             <RelatedServices />

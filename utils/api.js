@@ -73,59 +73,52 @@ export const pageMetaApi = {
     bulkUpdate: (pages) => apiClient.put("/page-meta/bulk/update", { pages }),
 };
 
-//! Contact API
-export const contactApi = {
-    sendMessage: (formData) => apiClient.post("/contact", formData),
-    getAll: () => apiClient.get("/contact"),
-    getById: (id) => apiClient.get(`/contact/${id}`),
-    toggleRead: (id) => apiClient.patch(`/contact/${id}/read`),
-    delete: (id) => apiClient.delete(`/contact/${id}`),
-};
-
+//! Home API endpoints
 export const homeApi = {
-    // Hero
-    getHero: () => apiClient.get("/home/hero"),
-    updateHero: (data) => {
-        return apiClient.put("/home/admin/hero", data, {
-            headers: {
-                "Content-Type": "multipart/form-data",
-            },
-        });
-    },
+    // Get all home data
+    getAll: () => apiClient.get("/home"),
 
-    // Stats
-    getStats: () => apiClient.get("/home/admin/stats"),
-    createStat: (data) => apiClient.post("/home/admin/stats", data),
-    updateStat: (id, data) => apiClient.patch(`/home/admin/stats/${id}`, data),
-    deleteStat: (id) => apiClient.delete(`/home/admin/stats/${id}`),
+    // Hero Section
+    updateHero: (formData) =>
+        apiClient.put("/home/hero", formData, {
+            headers: { "Content-Type": "multipart/form-data" },
+        }),
 
-    // Services
-    getServices: () => apiClient.get("/home/admin/services"),
-    createService: (data) => apiClient.post("/home/admin/services", data),
-    updateService: (id, data) => apiClient.patch(`/home/admin/services/${id}`, data),
-    deleteService: (id) => apiClient.delete(`/home/admin/services/${id}`),
+    // Company Section
+    updateCompanyMeta: (data) => apiClient.put("/home/company/meta", data),
+    addCompanyLogos: (formData) =>
+        apiClient.post("/home/company/logos", formData, {
+            headers: { "Content-Type": "multipart/form-data" },
+        }),
+    deleteCompanyLogo: (logoId) => apiClient.delete(`/home/company/logos/${logoId}`),
 
-    // Differences
-    getDifferences: () => apiClient.get("/home/admin/differences"),
-    createDifference: (data) => apiClient.post("/home/admin/differences", data),
-    updateDifference: (id, data) => apiClient.patch(`/home/admin/differences/${id}`, data),
-    deleteDifference: (id) => apiClient.delete(`/home/admin/differences/${id}`),
+    // Services Section
+    updateServicesMeta: (data) => apiClient.put("/home/services/meta", data),
+    addService: (formData) =>
+        apiClient.post("/home/services", formData, {
+            headers: { "Content-Type": "multipart/form-data" },
+        }),
+    updateService: (serviceId, formData) =>
+        apiClient.put(`/home/services/${serviceId}`, formData, {
+            headers: { "Content-Type": "multipart/form-data" },
+        }),
+    deleteService: (serviceId) => apiClient.delete(`/home/services/${serviceId}`),
 
-    // Pricing
-    getPricing: () => apiClient.get("/home/admin/pricing"),
-    createPricing: (data) => apiClient.post("/home/admin/pricing", data),
-    updatePricing: (id, data) => apiClient.patch(`/home/admin/pricing/${id}`, data),
-    deletePricing: (id) => apiClient.delete(`/home/admin/pricing/${id}`),
+    // Difference Section
+    updateDifferenceMeta: (data) => apiClient.put("/home/difference/meta", data),
+    addDifferenceItem: (formData) =>
+        apiClient.post("/home/difference", formData, {
+            headers: { "Content-Type": "multipart/form-data" },
+        }),
+    updateDifferenceItem: (itemId, formData) =>
+        apiClient.put(`/home/difference/${itemId}`, formData, {
+            headers: { "Content-Type": "multipart/form-data" },
+        }),
+    deleteDifferenceItem: (itemId) => apiClient.delete(`/home/difference/${itemId}`),
 
-    // FAQs
-    getFAQs: () => apiClient.get("/home/admin/faqs"),
-    createFAQ: (data) => apiClient.post("/home/admin/faqs", data),
-    updateFAQ: (id, data) => apiClient.patch(`/home/admin/faqs/${id}`, data),
-    deleteFAQ: (id) => apiClient.delete(`/home/admin/faqs/${id}`),
-
-    // Logos
-    getLogos: () => apiClient.get("/home/admin/logos"),
-    createLogo: (data) => apiClient.post("/home/admin/logos", data),
-    updateLogo: (id, data) => apiClient.patch(`/home/admin/logos/${id}`, data),
-    deleteLogo: (id) => apiClient.delete(`/home/admin/logos/${id}`),
+    // FAQ Section
+    updateFaqMeta: (data) => apiClient.put("/home/faq/meta", data),
+    addFaq: (data) => apiClient.post("/home/faq", data),
+    updateFaq: (faqId, data) => apiClient.put(`/home/faq/${faqId}`, data),
+    deleteFaq: (faqId) => apiClient.delete(`/home/faq/${faqId}`),
 };
